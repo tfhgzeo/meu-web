@@ -1,0 +1,92 @@
+body{
+    background-color: rgb(209, 209, 209);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box_menu{
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    min-width: 20%;
+    height: auto;
+    top: 30%;
+    left: 40%;
+    border:solid 1px;
+    border-radius:0px 20px 0px 20px;
+    border-color: rgba(0, 0, 0, 0.25);
+
+}
+
+.box_menu input{
+    left: 5%;
+    border:solid 1px;
+    border-color: rgba(0, 0, 0, 0.25);
+    direction: ltr;
+    text-align: left;
+    border-radius: 4px;
+    color: #202124;
+    font-size: 16px;
+    height: 28px;
+    margin: 1px 1px 0 1px;
+    padding: 13px 15px;
+    z-index: 1;
+    box-sizing: inherit;
+    flex-shrink: 1;
+    background-color: transparent;
+    font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    min-width: 0%;
+    outline: none;
+    unicode-bidi: isolate;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    -webkit-tap-highlight-color: transparent;
+    white-space: normal;
+
+}
+
+.box_menu label{
+    font-size: 12px;
+    align-self: right;
+    color: red;
+}
+
+#btn_submit{
+    align-self: auto;
+    color: #fff;
+    background-color:  #4CAF50;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    text-transform: none;
+    box-sizing: inherit;
+    line-height: 20px;
+    font-family: 'Google Sans',arial,sans-serif;
+    font-size: inherit;
+    letter-spacing: .25px;
+    text-align: right;
+    -webkit-user-select: none;
+    -webkit-transition: background .2s .1s;
+    transition: background .2s .1s;
+    border: 0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 4em;
+    width: 178px;
+    outline: none;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+#btn_submit:hover{
+    background-color: rgb(8, 185, 14);
+}

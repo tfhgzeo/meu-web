@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <link rel="stylesheet" href="/css/menu.css">
+    <script src="https://kit.fontawesome.com/26defb4e11.js" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+
+    <script>
+        var fbConfig = {
+            apiKey: "AIzaSyB4JY4KHVEug45IFNrzkbGmJ79_5SacI-M",
+            authDomain: "pythonweb-e1b7e.firebaseapp.com",
+            databaseURL: "https://pythonweb-e1b7e.firebaseio.com",
+            projectId: "pythonweb-e1b7e",
+            storageBucket: "pythonweb-e1b7e.appspot.com",
+            messagingSenderId: "119829487294",
+            appId: "1:119829487294:web:976bc2b5442b6e36dcc8ef",
+            measurementId: "G-X6QS7P2F1D"
+        };
+    </script>
+    <script src="js/firebaseAuthFeatures.js"></script>
+
+</head>
+
+<body>
+
+    <div class="opcao">
+        <button onclick="show('home')"> <i class="fas fa-home"></i> Home</button>
+        <button onclick="show('servico')"><i class="fas fa-concierge-bell"></i>Serviços</button>
+        <button onclick="show('btn2')" id="btnP"><i class="fas fa-archive"></i>Pacotes</button>
+        <button onclick="show2('install_remove')" onblur="hiden('btn2')" id="btn2" style="display: none;">Instalar Remover </button>
+
+    </div>
+
+    <div class="home" id="home">
+        <h1>HOME</h1>
+    </div>
+
+    <div class="servico" id="servico">
+
+        <h1>Servicos</h1>
+
+    </div>
+
+    <div class="pacote" id="pacote">
+
+        <div class="install_remove" id="install_remove">
+            <form action="/cgi-bin/install.cgi" method="POST">
+                <h1>Digite o pacote que deseja instalar</h1>
+                <input type="text" name="install" id="install" placeholder="Qual pacote quer instalar?">
+                <input type="submit" id="enviar_pacote" value="Instalar">
+            </form>
+            <form action="/cgi-bin/remove.cgi" method="POST">
+                <h1>Digite o pacote que deseja remover</h1>
+                <input type="text" name="remove" id="remove" placeholder="Qual pacote quer Remover?">
+                <input type="submit" id="remover_pacote" value="Remover">
+            </form>
+        </div>
+
+        <div class="listar" id="listar" style="display: none;" >
+            <h1>Pacotes instalados</h1>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

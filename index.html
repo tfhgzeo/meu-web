@@ -1,0 +1,43 @@
+<!DOCTYPE html SameSite>
+<html lang="pt-br">
+
+<head>
+    <meta SameSite="none">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Login - Sistema Integrado</title>
+    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <div class="box_menu">
+        <h1>Login</h1>
+        <input type="text" placeholder="Usuario" id="user" autofocus><br /><br>
+        <input type="password" placeholder="Senha" id="passwd"><br />
+        <label for="passwd" id="senha_incorreta"></label><br>
+        <input type="button" onclick="login()" id="btn_submit" value="Enviar" class="btns">
+    </div>
+
+    <script>
+        var fbConfig = {
+            apiKey: "AIzaSyB4JY4KHVEug45IFNrzkbGmJ79_5SacI-M",
+            authDomain: "pythonweb-e1b7e.firebaseapp.com",
+            databaseURL: "https://pythonweb-e1b7e.firebaseio.com",
+            projectId: "pythonweb-e1b7e",
+            storageBucket: "pythonweb-e1b7e.appspot.com",
+            messagingSenderId: "119829487294",
+            appId: "1:119829487294:web:976bc2b5442b6e36dcc8ef",
+            measurementId: "G-X6QS7P2F1D"
+        };
+        firebase.initializeApp(fbConfig);
+    </script>
+    <script src="js/firebaseAuthFeatures.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

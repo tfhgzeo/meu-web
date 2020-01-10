@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Servicos</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/menu.html">Home</a>
+        <a href="/html/servicos.html">Serviços</a>
+        <a href="/html/server.html">Servidores</a>
+        <a href="/html/about.html">Sobre Nós</a>
+    </div>
+
+    <center>
+        <div class="dropdown">
+            <h1>Menu</h1>
+            <button onclick="myFunctiond()" class="dropbtn">DNS Service</button>
+            <form action="/cgi-bin/menu.cgi" method="POST">
+                <div id="myDropdownd" class="dropdown-content">
+                    <input type="submit" name="d_i" value="Iniciar">
+                    <input type="submit" name="d_p" value="Parar">
+                    <input type="submit" name="d_r" value="Reiniciar">
+                    <input type="submit" name="d_s" value="Status">
+                </div>
+            </form>
+            <br>
+            <button onclick="myFunctiona()" class="dropbtn">Apache2 Service</button>
+            <form action="/cgi-bin/menu.cgi" method="POST">
+                <div id="myDropdowna" class="dropdown-content">
+                    <input type="submit" name="a_i" value="Iniciar">
+                    <input type="submit" name="a_r" value="Reiniciar">
+                    <input type="submit" name="a_s" value="Status">
+                </div>
+            </form>
+            <br>
+
+            <form action="/cgi-bin/install.cgi" method="post">
+                <div>
+                    <input type="text" name="install" id="install" placeholder="Qual pacote quer instalar?">
+                    <input type="submit" value="Instalar" id="btn_install">
+                </div>
+            </form>
+        </div>
+    </center>
+    <script src="/js/menu.js"></script>
+    
+</body>
+
+</html>

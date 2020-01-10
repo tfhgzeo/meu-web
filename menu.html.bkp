@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <link rel="stylesheet" href="/css/menu.css">
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+
+    <script>
+        var fbConfig = {
+            apiKey: "AIzaSyB4JY4KHVEug45IFNrzkbGmJ79_5SacI-M",
+            authDomain: "pythonweb-e1b7e.firebaseapp.com",
+            databaseURL: "https://pythonweb-e1b7e.firebaseio.com",
+            projectId: "pythonweb-e1b7e",
+            storageBucket: "pythonweb-e1b7e.appspot.com",
+            messagingSenderId: "119829487294",
+            appId: "1:119829487294:web:976bc2b5442b6e36dcc8ef",
+            measurementId: "G-X6QS7P2F1D"
+        };
+    </script>
+    <script src="js/firebaseAuthFeatures.js"></script>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="/menu.html">Home</a>
+        <a href="/html/servicos.html">Serviços</a>
+        <a href="/html/server.html">Servidores</a>
+        <a href="/html/about.html">Sobre Nós</a>
+    </div>
+
+    <div class="opcao">
+
+        <button id="install" onclick="hiden_show('teste1', 'teste2', 'teste3', 'escolha')">Instalacoes</button>
+        <button id="servicos" onclick="hiden_show('teste2', 'teste1', 'teste3', 'escolha')">Servicos</button>
+        <button id="Servidores" onclick="hiden_show('teste3', 'teste1', 'teste2', 'escolha')">Servidores</button>
+        <div class="opcao-cont" id="cont">
+            <h1 id="escolha">Escolha uma Opcao a cima</h1>
+            <div id="teste1">
+                <div class="menuL">
+                    <button id="btn_install">Instalar</button>
+                    <button id="btn_remove">Remove</button>
+                </div>
+                <form action="/cgi-bin/install.cgi" method="POST">
+                    <h1>Digite o pacote que deseja instalar</h1>
+                    <input type="text" name="install" id="install" placeholder="Qual pacote quer instalar?">
+                    <input type="submit" id="enviar_pacote" value="Instalar">
+                </form>
+                <form action="/cgi-bin/remove.cgi" method="POST">
+                    <h1>Digite o pacote que deseja remover</h1>
+                    <input type="text" name="remove" id="remove" placeholder="Qual pacote quer Remover?">
+                    <input type="submit" id="remover_pacote" value="Remover">
+                </form>
+            </div>
+            <h1 id="teste3"> Teste3</h1>
+            <div id="teste2" class="dropdown">
+                <h1>Menu</h1>
+                <button onclick="myFunctiond()" class="dropbtn">DNS Service</button>
+                <form id="dns_form" action="/cgi-bin/menu.cgi" method="POST">
+                    <div id="myDropdownd" class="dropdown-content">
+                        <input type="submit" name="d_i" value="Iniciar">
+                        <input type="submit" name="d_p" value="Parar">
+                        <input type="submit" name="d_r" value="Reiniciar">
+                        <input type="submit" name="d_s" value="Status">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>Criado por: Gustavo Aires</p>
+        <p>29/12/2019</p>
+        <p>E-mail: gustavoacm06@gmail.com Tel: (11) 96337-0119</p>
+    </footer>
+
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
